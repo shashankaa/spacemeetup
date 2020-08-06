@@ -1,0 +1,35 @@
+{
+  "name": "hw2",
+  "version": "1.0.0",
+  "description": "Space center meetup",
+  "main": "app.js",
+  "dependencies": {
+    "array-list": "^1.0.7",
+    "arraylist": "^0.1.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "express-validator": "^5.3.1",
+    "mongoose": "^5.7.10",
+    "mongoose-hidden": "^1.8.1",
+    "mongoose-sequence": "^5.2.2",
+    "node": "^12.12.0",
+    "node-gyp": "^6.0.1",
+    "node-pre-gyp": "^0.14.0",
+    "nodemon": "^1.19.4",
+    "simple-node-logger": "^18.12.23"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shashank Mohan",
+  "license": "ISC",
+  "keywords": [
+    "Space",
+    "center",
+    "meetup"
+  ]
+}

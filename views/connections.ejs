@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include partials/head.ejs %>
+
+<body>
+
+        <% include partials/header.ejs %>
+        <% include partials/nav.ejs %>
+
+
+        <main class="bringtotop">
+             <% j.clear() %>
+             <% var p%>
+                <% for(var i=0;i<func.size();i++){%>
+                                <% if (j===undefined||!j.includes(func.get(i).connectiontopic)) {%>
+                                        <%  j.add(func.get(i).connectiontopic)%>
+
+                                        <%}%>        
+                         
+                                     
+                                              
+              
+        <%}%>
+        <% console.log(j.size(),"inside ejs")%>
+        <% for(var i=0;i<j.size();i++){%>
+                        <H2><%=j.get(i) %></H2> 
+                        <% for(var p=0;p<func.size();p++){%>
+                        <% if (j.get(i)===func.get(p).connectiontopic) {%>
+                                <ul>
+                                <li><a href="connection.ejs?connection=<%=func.get(p).connectionid %>"><%=func.get(p).connectionname %></a>
+                                </li>
+                        </ul>
+                        <%}%>    
+                        <%}%>  
+                        <%}%>  
+        </main>
+</br></br></br></br></br></br>
+        
+
+        <% include partials/footer.ejs %>
+
+
+</body>
+
+</html>

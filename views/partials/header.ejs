@@ -1,0 +1,27 @@
+<header>
+    <ul> 
+       <% if(the!==undefined){%>
+        <li class="col-md-3"><a href="../newconnection.ejs">Start a new Connection </a></li>
+        <li >|</li>
+        <li class="col-md-3"><a href="../saved_connections.ejs"> Myconnection</a></li>
+        <li  >|</li>
+        <li class="col-lg-3"><a href="../login.ejs"> Signout</a></li>
+        <% }%>
+        
+        <% if(the===undefined){%>
+            <% value="hello"%>
+            <li class="col-md-3"><a href="../saved_connections.ejs">Start a new Connection </a></li>
+            <li >|</li>
+        <li class="col-lg-3"><a href="../login.ejs">Login</a></li>
+        <li  >|</li>
+        <li class="col-lg-3"><a href="../signup.ejs">Signup </a></li>
+        <% }%>
+       
+        
+
+
+    </ul>
+
+    <div><a href="/"><img class="col-xs-3" src="../../assets/space_metup.jpg.png" height=50 width=50 alt="welcome"></a></div>
+
+    </header>

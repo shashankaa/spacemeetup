@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <% include partials/head.ejs %>
+
+<body>
+
+     
+        <% include partials/header.ejs %>
+        <% include partials/nav.ejs %>
+        
+     
+    <main>
+
+            <h5 class="h5class">
+                <%=username%>'s CONNECTIONS!</h5>
+                    <div class=col-xs-4>Welcome <%=username%>!</div>
+                   
+        <table >
+               
+            <tr>
+                <th>Connection </th>
+                <th>Category</th>
+                <th>going?</th>
+                <th></th>
+
+            </tr>
+            <% 
+                var lists=List  
+               console.log(lists,"inside of ejs") %>
+                <% if (lists!==undefined){%>
+                <% for(var i=0;i<lists.size();i++){%> 
+               
+                <tr>
+                    <td><%=lists.get(i).cname %>
+                    </td>
+                    <td><%=lists.get(i).ctopic %></td>
+                    <td><%=lists.get(i).rsvp %></td>
+                    
+                    <td><button onclick="location.href='connection.ejs?connection=<%= lists.get(i).connectionid %> '"
+                            class="btn btn-primary btn-sm">UPDATE</button>
+                            <form action="saved_connections.ejs" method="POST">
+                            <button type="submit" class="btn btn-primary btn-sm" value="<%=lists.get(i).connectionid%>" name="delete" formaction= "/saved_connections.ejs" id="delete">DELETE</button>     
+                           </form>
+                    </td>
+                </tr>
+                <% }%>
+                <%lists.clear();%>
+                <% }%>                   
+        </table>
+
+    </main>
+
+    <% include partials/footer.ejs %>
+
+</body>
+</html>

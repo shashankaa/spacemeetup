@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% include partials/head.ejs %>
+
+<body>
+    <% include partials/header.ejs %>
+    <% include partials/nav.ejs %>
+    <main>
+        <div class="moveup">
+            <h5 class="moveh4"><%=ids.connectionname %></h5>
+            <div class="row" id="para">
+                <div> <img src="../assets/drphil.jpg" height=100 alt="welcome">
+                </div>
+                <div>
+                   host:<%=ids.host%><br>date:<%=ids.date%><br>time:<%=ids.time%><br>
+                   location: <%=ids.location %>
+                </div>
+            </div>
+            <br> <br>
+            <h5> DETAILS</h5>
+            <h6 class="col-md-5"><%=ids.details%></h6>
+        </div>
+        <div class="moveright">
+            
+            <br>
+            <form action="saved_connections.ejs" method="POST">
+                    <div class="container">
+                            <label for="YES"><b></b></label>
+                            <button type="submit" value="YES" name="YES" formaction= "/saved_connections.ejs" id="YES">YES</button>
+                            <label for="NO"><b></b></label>
+                            <button type="submit" value="NO" name="NO" formaction= "/saved_connections.ejs" id="NO">NO</button>
+                            <label for="MAYBE"><b></b></label>
+                            <button type="submit" value="MAYBE" name="MAYBE" formaction= "/saved_connections.ejs" id="MAYBE">MAYBE</button>
+                            <%if(ids.owner_user_id===the){%>
+                            <label for="UPDATECONNECTION"><b></b></label>
+                            <button type="submit" name="UPDATECONNECTION" value="<%=ids.connectionid%>" formaction= "/newconnection.ejs" id="UPDATECONNECTION">UPDATE CONNECTION</button>
+                            <label for="DELETECONNECTION"><b></b></label>
+                            <button type="submit" value="<%=ids.connectionid%>" name="DELETECONNECTION" formaction= "/connections.ejs" id="DELETECONNECTION">DELETE CONNECTION</button>
+                            <%}%>
+                          </div>
+        </form>
+        </div>
+    </main>
+    <% include partials/footer.ejs %>
+</body>

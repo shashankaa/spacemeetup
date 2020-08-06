@@ -1,0 +1,50 @@
+14:28:51.308 INFO  []ilkapp 
+14:28:51.308 INFO  [] 
+14:28:51.324 INFO  destroy 
+14:28:55.738 INFO  did you see 
+14:28:55.738 INFO  value 
+14:28:55.738 INFO  final session results{"cookie":{"originalMaxAge":null,"expires":null,"httpOnly":true,"path":"/"}} 
+14:28:55.740 INFO  in connections 
+14:28:57.637 INFO  5illi 
+14:28:57.641 INFO  inside connection.ejs 
+14:28:59.997 INFO  Listconn much before 
+14:29:07.940 INFO  Listconn much before 
+14:29:10.381 INFO  did you see 
+14:29:10.381 INFO  value 
+14:29:10.381 INFO  final session results{"cookie":{"originalMaxAge":null,"expires":null,"httpOnly":true,"path":"/"}} 
+14:29:10.381 INFO  in connections 
+14:29:13.140 INFO  Listconn much before 
+14:29:20.390 INFO  Listconn much before 
+14:29:21.978 INFO  Listconn much before 
+14:29:21.978 INFO  usercheck0 
+14:29:21.978 INFO  Listconn 
+14:29:21.979 INFO  0here userid is this 
+14:29:21.979 INFO  0befire call 
+14:29:24.019 INFO  0here is inside very 
+14:29:46.369 INFO  did you see 
+14:29:46.369 INFO  5value 
+14:29:46.369 INFO  final session results{"cookie":{"originalMaxAge":null,"expires":null,"httpOnly":true,"path":"/"},"userid":"0","i":0} 
+14:29:46.369 INFO  in connections 
+14:29:48.112 INFO  6illi 
+14:29:48.118 INFO  inside connection.ejs 
+14:29:58.161 INFO  Listconn much before 
+14:29:59.751 INFO  did you see 
+14:29:59.751 INFO  5value 
+14:29:59.751 INFO  final session results{"cookie":{"originalMaxAge":null,"expires":null,"httpOnly":true,"path":"/"},"userid":"0","i":0} 
+14:29:59.751 INFO  in connections 
+14:30:01.826 INFO  6illi 
+14:30:01.837 INFO  inside connection.ejs 
+14:30:04.830 INFO  Listconn much before 
+14:30:04.830 INFO  usercheck0 
+14:30:04.830 INFO  Listconn 
+14:30:04.831 INFO  0here userid is this 
+14:30:04.831 INFO  0befire call 
+14:30:04.860 INFO  0here is inside very 
+14:30:06.597 INFO  6illi 
+14:30:06.600 INFO  inside connection.ejs 
+14:30:08.717 INFO  Listconn much before 
+14:30:08.717 INFO  usercheck0 
+14:30:08.717 INFO  Listconn 
+14:30:08.718 INFO  0here userid is this 
+14:30:08.718 INFO  0befire call 
+14:30:08.747 INFO  0here is inside very 
