@@ -1,6 +1,6 @@
 var connections = require('./../Model/connection.js').connections
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/Space_observatory_meetup', {useNewUrlParser: true});
+mongoose.connect('mongodb+srv://shanks:Ayappa@cluster0.0jhwi.mongodb.net/<dbname>?retryWrites=true&w=majority', {useNewUrlParser: true});
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
