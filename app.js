@@ -17,4 +17,5 @@ app.use('/',profilecontroller)
 var stringtosee="2:00AM to 3:00PM"
 var sto=stringtosee.split(' ');
 console.log(sto[0]);
+app.listen(8080);
 
