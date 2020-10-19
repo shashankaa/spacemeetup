@@ -1,0 +1,155 @@
+11:43:01.955 INFO  []ilkapp 
+11:43:01.955 INFO  [] 
+11:43:01.973 INFO  destroy 
+11:43:11.595 INFO  Listconn much before 
+11:43:14.040 INFO  did you see 
+11:43:14.040 INFO  value 
+11:43:14.040 INFO  final session results{"cookie":{"originalMaxAge":3600000,"expires":"2020-10-19T16:43:11.871Z","secure":false,"httpOnly":true,"path":"/","sameSite":false},"email":"shanks@m.com","userid":"0"} 
+11:43:14.040 INFO  in connections 
+11:43:20.658 INFO  8illi 
+11:43:20.663 INFO  inside connection.ejs 
+11:43:21.994 INFO  Listconn much before 
+11:43:21.994 INFO  usercheck0 
+11:43:21.994 INFO  Listconn 
+11:43:21.996 INFO  0here userid is this 
+11:43:21.996 INFO  0befire call 
+11:43:22.336 INFO  0here is inside very 
+11:43:25.995 INFO  Listconn much before 
+11:43:41.114 INFO  []ilkapp 
+11:43:41.114 INFO  [] 
+11:43:41.129 INFO  destroy 
+11:43:43.176 INFO  Listconn much before 
+11:43:45.793 INFO  did you see 
+11:43:45.793 INFO  8value 
+11:43:45.793 INFO  final session results{"cookie":{"originalMaxAge":3600000,"expires":"2020-10-19T16:43:43.444Z","secure":false,"httpOnly":true,"path":"/","sameSite":false},"email":"shanks@m.com","userid":"0","i":"0"} 
+11:43:45.794 INFO  in connections 
+11:43:54.939 INFO  5illi 
+11:43:54.952 INFO  inside connection.ejs 
+11:43:56.164 INFO  Listconn much before 
+11:43:56.164 INFO  usercheck0 
+11:43:56.164 INFO  Listconn 
+11:43:56.166 INFO  0here userid is this 
+11:43:56.166 INFO  0befire call 
+11:43:56.251 INFO  0here is inside very 
+11:44:00.283 INFO  did you see 
+11:44:00.283 INFO  5value 
+11:44:00.283 INFO  final session results{"cookie":{"originalMaxAge":3599999,"expires":"2020-10-19T16:43:56.468Z","secure":false,"httpOnly":true,"path":"/","sameSite":false},"email":"shanks@m.com","userid":"0","i":"0"} 
+11:44:00.283 INFO  in connections 
+11:44:01.701 INFO  2illi 
+11:44:01.714 INFO  inside connection.ejs 
+11:44:02.999 INFO  Listconn much before 
+11:44:02.999 INFO  usercheck0 
+11:44:02.999 INFO  Listconn 
+11:44:03.001 INFO  0here userid is this 
+11:44:03.001 INFO  0befire call 
+11:44:03.139 INFO  0here is inside very 
+11:44:07.854 INFO  2illi 
+11:44:07.858 INFO  inside connection.ejs 
+11:44:09.354 INFO  Listconn much before 
+11:44:09.354 INFO  usercheck0 
+11:44:09.354 INFO  Listconn 
+11:44:09.355 INFO  0here userid is this 
+11:44:09.355 INFO  0befire call 
+11:44:09.448 INFO  0here is inside very 
+11:44:13.837 INFO  Listconn much before 
+11:44:26.399 INFO  Listconn much before 
+11:44:28.648 INFO  did you see 
+11:44:28.648 INFO  2value 
+11:44:28.648 INFO  final session results{"cookie":{"originalMaxAge":3599999,"expires":"2020-10-19T16:44:26.633Z","secure":false,"httpOnly":true,"path":"/","sameSite":false},"email":"sp@gmail.com","i":0,"userid":"10"} 
+11:44:28.648 INFO  in connections 
+11:44:31.404 INFO  8illi 
+11:44:31.407 INFO  inside connection.ejs 
+11:44:32.891 INFO  Listconn much before 
+11:44:32.891 INFO  usercheck10 
+11:44:32.891 INFO  Listconn 
+11:44:32.893 INFO  10here userid is this 
+11:44:32.893 INFO  10befire call 
+11:44:32.978 INFO  10here is inside very 
+11:44:38.645 INFO  Listconn much before 
+11:44:41.032 INFO  did you see 
+11:44:41.032 INFO  8value 
+11:44:41.032 INFO  final session results{"cookie":{"originalMaxAge":3599999,"expires":"2020-10-19T16:44:38.876Z","secure":false,"httpOnly":true,"path":"/","sameSite":false},"email":"sp@gmail.com","i":"10","userid":"10"} 
+11:44:41.032 INFO  in connections 
+11:44:43.081 INFO  6illi 
+11:44:43.085 INFO  inside connection.ejs 
+11:44:44.501 INFO  Listconn much before 
+11:44:44.501 INFO  usercheck10 
+11:44:44.501 INFO  Listconn 
+11:44:44.503 INFO  10here userid is this 
+11:44:44.503 INFO  10befire call 
+11:44:44.587 INFO  10here is inside very 
+11:44:47.035 INFO  Listconn much before 
+11:44:48.866 INFO  did you see 
+11:44:48.866 INFO  6value 
+11:44:48.866 INFO  final session results{"cookie":{"originalMaxAge":3599999,"expires":"2020-10-19T16:44:47.289Z","secure":false,"httpOnly":true,"path":"/","sameSite":false},"email":"sp@gmail.com","i":"10","userid":"10"} 
+11:44:48.866 INFO  in connections 
+11:44:50.478 INFO  2illi 
+11:44:50.487 INFO  inside connection.ejs 
+11:44:51.746 INFO  Listconn much before 
+11:44:51.746 INFO  usercheck10 
+11:44:51.746 INFO  Listconn 
+11:44:51.748 INFO  10here userid is this 
+11:44:51.748 INFO  10befire call 
+11:44:52.038 INFO  10here is inside very 
+11:44:54.191 INFO  did you see 
+11:44:54.191 INFO  2value 
+11:44:54.191 INFO  final session results{"cookie":{"originalMaxAge":3599999,"expires":"2020-10-19T16:44:52.287Z","secure":false,"httpOnly":true,"path":"/","sameSite":false},"email":"sp@gmail.com","i":"10","userid":"10"} 
+11:44:54.191 INFO  in connections 
+11:44:56.460 INFO  7illi 
+11:44:56.464 INFO  inside connection.ejs 
+11:44:57.623 INFO  Listconn much before 
+11:44:57.623 INFO  usercheck10 
+11:44:57.623 INFO  Listconn 
+11:44:57.625 INFO  10here userid is this 
+11:44:57.625 INFO  10befire call 
+11:44:57.714 INFO  10here is inside very 
+11:45:00.106 INFO  Listconn much before 
+11:45:12.117 INFO  Listconn much before 
+11:45:15.298 INFO  Listconn much before 
+11:45:15.298 INFO  usercheck0 
+11:45:15.298 INFO  Listconn 
+11:45:15.299 INFO  0here userid is this 
+11:45:15.299 INFO  0befire call 
+11:45:15.401 INFO  0here is inside very 
+11:45:17.381 INFO  did you see 
+11:45:17.381 INFO  7value 
+11:45:17.381 INFO  final session results{"cookie":{"originalMaxAge":3599999,"expires":"2020-10-19T16:45:15.640Z","secure":false,"httpOnly":true,"path":"/","sameSite":false},"email":"shanks@m.com","i":0,"userid":"0"} 
+11:45:17.381 INFO  in connections 
+11:45:36.584 INFO  did you see 
+11:45:36.584 INFO  7value 
+11:45:36.584 INFO  final session results{"cookie":{"originalMaxAge":3599999,"expires":"2020-10-19T16:45:34.758Z","secure":false,"httpOnly":true,"path":"/","sameSite":false},"email":"shanks@m.com","i":0,"userid":"0"} 
+11:45:36.584 INFO  in connections 
+11:45:41.764 INFO  9illi 
+11:45:41.770 INFO  inside connection.ejs 
+11:45:43.695 INFO  Listconn much before 
+11:45:43.695 INFO  usercheck0 
+11:45:43.695 INFO  Listconn 
+11:45:43.697 INFO  0here userid is this 
+11:45:43.697 INFO  0befire call 
+11:45:43.799 INFO  0here is inside very 
+11:46:03.384 INFO  did you see 
+11:46:03.384 INFO  9value 
+11:46:03.384 INFO  final session results{"cookie":{"originalMaxAge":3599999,"expires":"2020-10-19T16:46:00.368Z","secure":false,"httpOnly":true,"path":"/","sameSite":false},"email":"sp@gmail.com","i":0,"userid":"10"} 
+11:46:03.384 INFO  in connections 
+11:46:06.579 INFO  9illi 
+11:46:06.583 INFO  inside connection.ejs 
+11:46:07.791 INFO  Listconn much before 
+11:46:07.791 INFO  usercheck10 
+11:46:07.791 INFO  Listconn 
+11:46:07.792 INFO  10here userid is this 
+11:46:07.792 INFO  10befire call 
+11:46:07.876 INFO  10here is inside very 
+11:46:10.732 INFO  Listconn much before 
+11:51:16.468 INFO  Listconn much before 
+11:51:16.468 INFO  usercheck10 
+11:51:16.468 INFO  Listconn 
+11:51:16.470 INFO  10here userid is this 
+11:51:16.470 INFO  10befire call 
+11:51:16.612 INFO  10here is inside very 
+11:51:43.169 INFO  []ilkapp 
+11:51:43.169 INFO  [] 
+11:51:43.179 INFO  destroy 
+11:51:46.890 INFO  Listconn much before 
+11:51:48.360 INFO  []ilkapp 
+11:51:48.360 INFO  [] 
+11:51:48.373 INFO  destroy 

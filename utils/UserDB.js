@@ -71,8 +71,6 @@ getAllusers = async function() {
 }
 async function getUser(uname){
 let usid=await Users.find({email:uname},'userid -_id');
-
-        
         console.log(usid[0],"usid");
         if(usid[0]!==undefined)
         {

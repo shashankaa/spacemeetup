@@ -4,7 +4,21 @@ var getConnections = require('../utils/ConnectionDB').getConnections
 var getconid = require('../utils/ConnectionDB').getConnection
 var bodyParser=require('body-parser')
 var session=require('express-session')
-router.use(session({secret:'mysession'}));
+
+router.use(
+	session({
+      name: "Session",
+		resave: false,
+		saveUninitialized: true,
+		secret: "mysession",
+		cookie: {
+			maxAge: 1000 * 60 * 60,
+			sameSite: false,
+			secure: false
+		}
+	})
+);
+// router.use(session({secret:'mysession'}));
 var ArrayList=require('arraylist')
 var arraylist=require('arraylist')
 var i=undefined;
@@ -28,10 +42,6 @@ var getUserinfo=require('../utils/UserDB').getUserinfo;
 var getUsername=require('../utils/UserDB').getUsername;
 var uids;
 var usup=require('../utils/UserDB').usup;
-
-
-
-
    router.get('/connections.ejs',function (req, res) {  
       log.info(
        session,"did you see")
@@ -53,6 +63,12 @@ var usup=require('../utils/UserDB').usup;
    })
       log.info(req.session.Listconn,"in connections")
    });
+   router.get('/index.ejs', function (req, res) {
+      if(req.session.userid===undefined)
+      res.render({the:undefined});
+      else
+      res.render({the:req.session.userid});
+   });
 router.get('/about.ejs', function (req, res) {
    console.log(req.session,"inside about")
    res.render('about.ejs',{the:req.session.i})
@@ -62,9 +78,9 @@ router.get('/contact.ejs', function (req, res) {
    res.render('contact.ejs',{the:req.session.i})
 });
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
-router.get('/login.ejs', urlencodedParser,function (req, res) {
-   req.session.userid=undefined;
-   i=undefined
+router.get('/login.ejs',function (req, res) {
+   req.session.userid=undefined
+   console.log(req.session,"here is judgement");
       res.render("login.ejs",{message:undefined,the:req.session.userid})
 });
 
@@ -117,8 +133,10 @@ router.post('/index.ejs', urlencodedParser,function (req, res) {
    guser().then( async function()
    {
       noofusers= await db.collection('users').find({email:req.body.email}).count()
-      guserid(req.body.email).then(async function(usid){  
-         // console.log(userid,noofusers,"here inside controller")
+      req.session.email=req.body.email;
+      guserid(req.session.email).then(async function(usid){  
+         console.log(req.body.email,"patch 2020");
+         console.log(req.body.session,"patch 2020sessions");
           uids=usid;
          if(noofusers==0)
          {
@@ -127,7 +145,7 @@ router.post('/index.ejs', urlencodedParser,function (req, res) {
          res.render("login.ejs",{message:message,the:undefined})
          }
          else
-         {   
+         { 
            getUserinfo(usid).then(function(usid){
                results=Userschems.methods.validPassword(req.body.psw,usid);    
                // console.log(results,"pass here")
@@ -140,6 +158,7 @@ router.post('/index.ejs', urlencodedParser,function (req, res) {
                i=0;
                req.session.userid=uids;
                userid=req.session.userid;
+               console.log(req.session,"patch 2020sessions"); 
                // console.log("userid inside controller",userid)
                getUsername(userid).then(function(name)
                {
@@ -151,53 +170,52 @@ router.post('/index.ejs', urlencodedParser,function (req, res) {
             });
    }
    })
-//   console.log(userid,"wbt here")
-   // const { check, validationResult } = require('express-validator');
+
 });
 });
 router.get('/', function (req, res) {
 log.info(Listconn,"ilkapp")
 log.info(Listconn);
-req.session.i=i
 //log.info(req.session.Listconn,"hereseepls")
 // console.log(req.query.the,"the")
-var check=req.session.i
+var check=req.session.userid
 // console.log(check==1,check===undefined)
 if(check===undefined)
 {
 // console.log("inside session attributes",i)
 res.render("index.ejs",{message:"message",the:undefined})
 }
-if(check==1)
+if(check!==undefined)
 {
    // console.log("inside session attributes")
-   req.session.i=i
+   console.log(session);
 }
   log.info(session,"destroy")
 // console.log(req.session.i,"this is i")
-      res.render('index.ejs',{the:req.session.i})
+      res.render('index.ejs',{the:req.session.userid})
 
 })
 router.get('/saved_connections.ejs', function (req, res,next) {
    var uid;
    // console.log("inside get")
-   if(req.query.the!==undefined)
-   {
-   req.session.i=req.query.the
-   i=req.session.i
-   }
-    req.session.i=i
+   // if(req.query.the!==undefined)
+   // {
+   // req.session.i=req.query.the
+   // i=req.session.i
+   // }
+    i=req.session.userid;
+    console.log(req.session.i,"get2020 saved connections");
    // console.log("INSIDE ROUTER",i)
       log.info(req.session.Listconn,"Listconn much before")
       if(i!==undefined)
       {
          getconid(value).then(function(value){ 
             // console.log(value,"inside my workspace over here way deep in the pit")
-            new UserConnectionDB().userprofile(userid).then(function(something){
+            new UserConnectionDB().userprofile(i).then(function(something){
             // console.log(something,"somewhere")
             List.add(something)
             // console.log(uname,"controller")
-            res.render('saved_connections.ejs',{the:req.session.i,List:List,username:uname})
+            res.render('saved_connections.ejs',{the:req.session.userid,List:List,username:req.session.email})
             return List;
          })
       })
@@ -207,29 +225,35 @@ router.get('/saved_connections.ejs', function (req, res,next) {
    });
 router.post('/saved_connections.ejs',urlencodedParser, function (req, res,next) {
    var uid;
-if(req.query.the!==undefined)
-{
-req.session.i=req.query.the
-i=req.session.i
-}
- req.session.i=i
+// if(req.query.the!==undefined)
+// {
+// req.session.i=req.query.the
+// i=req.session.i
+// console.log(req.session.i,"2020 saved connections");
+// }
+ i=req.session.userid;
 // console.log("INSIDE ROUTER",i)
    log.info(req.session.Listconn,"Listconn much before")
+  
    if(i!==undefined)      
       {
          log.info("usercheck",userid)
       i=0
-      req.session.i=i;
+     
       // console.log(req.session.Listconn,"query here pls")
       log.info(req.session.uconn,"Listconn",Listconn.size())
-      if(id!==null&&id!==undefined)
+      console.log(req.session.userid,"yoyoyoyoyoyoy");
+      if(id!==null&&id!==undefined&&req.session.userid!==undefined)
       value=id.connectionid;
+      if(req.session.userid!==undefined)
+      {
        if(req.body.YES)
        rsvp=req.body.YES;
        else if(req.body.MAYBE)
        rsvp=req.body.MAYBE;
        else 
        rsvp=req.body.NO;
+      }
        console.log("value here inside profile",value,rsvp)
      log.info(userid,"here userid is this")
     cid=req.body.delete;
@@ -237,17 +261,17 @@ i=req.session.i
    var myrsvp=req.query.myrsvp
 log.info(userid,"befire call")
 new UserConnectionDB().deleteconn(req.body.delete,userid);
-new UserConnectionDB().addRSVP(value,userid,rsvp).then(function(){ 
+new UserConnectionDB().addRSVP(value,req.session.userid,rsvp).then(function(){ 
      
       
   getconid(value).then(function(value){ 
       // console.log(value,"inside my workspace over here way deep in the pit")
     log.info(userid,"here is inside very")
-    new UserConnectionDB().userprofile(userid).then(function(something){
+    new UserConnectionDB().userprofile(req.session.userid).then(function(something){
        console.log(something,"somewhere")
       List.add(something)
 // console.log(uname,"controller")
-   res.render('saved_connections.ejs',{the:req.session.userid,List:List,username:uname})
+   res.render('saved_connections.ejs',{the:req.session.userid,List:List,username:req.session.email})
    })
 })
 })
@@ -291,6 +315,9 @@ router.post('/connections.ejs',urlencodedParser,function(req,res){
 })
 
 router.get('/newconnection.ejs', function (req, res) {
+   console.log("req.session.userid",req.session.userid);
+   if(req.session.userid===undefined)
+   res.render('login.ejs',{the:req.session.userid,message:"not logged in"})
    req.session.i=0;
    req.body=req.query;
    // console.log(req.query,"query")
